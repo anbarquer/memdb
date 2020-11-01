@@ -23,7 +23,7 @@ def apply_filters(entity, filters) -> None:
 
 
 if __name__ == '__main__':
-    Persons = Entity(name='Person', attrs='name age city')
+    Persons = Entity(model='Person', attrs='name age city')
 
     Persons.repository.add({'name': 'This is a test', 'age': 23, 'city': 'Neverland'})
     print('Filter using Python lambda functions', Persons.repository.filter_by(lambda x: x.city == 'Neverland'))
