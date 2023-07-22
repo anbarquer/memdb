@@ -1,9 +1,9 @@
 # -*- coding: utf-8
 
 import random
-from typing import List, Generator, Dict
+from typing import Generator
 
-_NAMES: List[str] = [
+_NAMES: list[str] = [
     'Liam',
     'Olivia',
     'Noah',
@@ -18,7 +18,7 @@ _NAMES: List[str] = [
     'Bernard'
 ]
 
-_CITIES: List[str] = [
+_CITIES: list[str] = [
     'Barcelona',
     'London',
     'Indianapolis',
@@ -35,7 +35,7 @@ _CITIES: List[str] = [
     'Rome'
 ]
 
-_FAVOURITE_FOOD: List[str] = [
+_FAVOURITE_FOOD: list[str] = [
     'Pasta',
     'Ice Cream',
     'Bread',
@@ -54,7 +54,7 @@ _FAVOURITE_FOOD: List[str] = [
 MIN, MAX = 10000, 100000
 
 
-def get_person_data() -> Generator[Dict, None, None]:
+def get_person_data() -> Generator:
     min_person, max_person = 1, 99
     while True:
         yield {
@@ -64,7 +64,7 @@ def get_person_data() -> Generator[Dict, None, None]:
         }
 
 
-def get_cat_data() -> Generator[Dict, None, None]:
+def get_cat_data() -> Generator:
     min_cat, max_cat = 1, 20
     while True:
         yield {

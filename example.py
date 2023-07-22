@@ -2,7 +2,7 @@
 
 import random
 
-from fixtures import get_person_data, MIN, MAX, get_cat_data
+from memdb.fixtures import get_person_data, MIN, MAX
 from memdb import Entity, measure
 
 
