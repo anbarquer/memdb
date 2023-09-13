@@ -16,6 +16,10 @@ class Config(object):
     ):
         self.cache_size = cache_size
 
+    @cached_property
+    def cache_size(self) -> int:
+
+
 
 class Entity(object):
 
@@ -81,7 +85,7 @@ class Entity(object):
         self._repository = namedtuple(f'{self._Entity.__name__}_Repository',
                                       ' '.join(methods.keys()))(**methods)  # noqa
 
-        self._config = config is config is not None else Config()
+        self._config = config if config is not None else Config()
 
 
     @property
